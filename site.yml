@@ -1,0 +1,11 @@
+---
+
+- name: Vagrant add user ssh
+
+  hosts: all
+  become: yes
+  remote_user: vagrant
+  
+  roles:
+    - common
+

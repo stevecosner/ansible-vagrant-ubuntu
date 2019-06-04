@@ -1,0 +1,19 @@
+---
+
+- name: Add the user 'matt' with a bash shell, appending the group sudo
+  user:
+    name: steve
+    shell: /bin/bash
+    groups: sudo
+    append: yes
+
+- name: Set authorized key taken from file
+  authorized_key:
+    user: steve
+    state: present
+    key: "{{ lookup('file', '/home/steve/.ssh/id_rsa_msa.pub') }}"
+
+- lineinfile:
+    path: /etc/sudoers
+    regexp: 'aaafff'
+    line: 'steve ALL=(ALL) NOPASSWD:ALL'
