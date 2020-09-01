@@ -11,7 +11,7 @@
   authorized_key:
     user: steve
     state: present
-    key: "{{ lookup('file', '/home/steve/.ssh/id_rsa_msa.pub') }}"
+    key: "{{ lookup('file', '/home/steve/.ssh/id_rsa.pub') }}"
 
 - lineinfile:
     path: /etc/sudoers

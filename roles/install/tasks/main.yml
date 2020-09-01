@@ -1,0 +1,19 @@
+- name: ensure a list of packages installed
+
+  apt:
+
+    name: "{{ packages }}"
+
+  vars:
+
+    packages:
+
+    - htop
+
+    - curl
+
+    - nginx
+
+    - ansible
+
+    - docker.io

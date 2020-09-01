@@ -1,11 +1,11 @@
 ---
 
-- name: Vagrant add user ssh
+- name: vagrant ubuntu playbook
 
   hosts: all
   become: yes
   remote_user: vagrant
   
   roles:
-    - common
-
+#    - update
+    - install
